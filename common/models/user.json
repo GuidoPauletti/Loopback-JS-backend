@@ -1,0 +1,36 @@
+{
+  "name": "user",
+  "base": "User",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "email": {
+      "type": "string"
+    },
+    "password": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "Profile": {
+      "type": "hasMany",
+      "model": "Profile",
+      "foreignKey": ""
+    },
+    "CustomAccesToken": {
+      "type": "hasMany",
+      "model": "CustomAccesToken",
+      "foreignKey": "userId"
+    },
+    "Post": {
+      "type": "hasMany",
+      "model": "Post",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}
